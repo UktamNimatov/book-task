@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: book-project
+  datasource:
+    url: ${book.database.url}
+    username: ${book.database.username}
+    password: ${book.database.password}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    database: postgresql
+    properties:
+      hibernate:
+#        dialect: org.hibernate.dialect.PostgreSQL95Dialect
+        temp:
+          use_jdbc_metadata_defaults: false
+  sql:
+    init:
+      encoding: UTF-8
+
+
